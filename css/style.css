@@ -32,6 +32,7 @@
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
      --box-shadow-whatsapp: 1px 1px 4px rgba(60, 60, 60, 0.4);
      --box-shadow-products: 0 6px 10px rgba(0, 0, 0, .2);
+     --box-shadow-drop-down: 0 3px 4px rgba(0, 0, 0, .2);
 }
 
 html {
@@ -41,6 +42,22 @@ html {
 
 body {
      overflow-x: hidden;
+}
+
+section {
+     padding: 5rem 3% 5rem;
+}
+
+header {
+     padding: 0 3%;
+}
+
+footer {
+     padding: 2rem 3%;
+}
+
+a {
+     cursor: pointer;
 }
 
 .space {
@@ -71,12 +88,32 @@ body {
      align-items: center;
 }
 
+.btn {
+     font-size: 1.5rem;
+     padding: 1rem;
+     background-color: var(--main-color);
+     color: var(--text-color-light);
+     border: var(--border-white);
+     border-radius: .4rem;
+     cursor: pointer;
+}
+
+.btn:hover {
+     background-color: var(--bg-color);
+     color: var(--main-color);
+     border: var(--border-main-color);
+}
+
 .header {
      position: fixed;
      top: 0;
      right: 0;
      width: 100%;
      z-index: 100;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--bg-color);
 }
 
 .header.sticky {
@@ -87,14 +124,202 @@ body {
      height: 8rem;
 }
 
-#hamburg {
-     font-size: 3.5rem;
-     color: var(--text-color-light);
+.navbar {
+     display: flex;
+     align-items: center;
+}
+
+.navbar ul {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     gap: 3rem;
+}
+
+.navbar ul li {
+     position: relative;
+}
+
+.navbar ul li>a {
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: var(--text-color-dark-heading);
+     display: flex;
+     align-items: center;
+     gap: .4rem;
+}
+
+.navbar ul li>a:hover span,
+.navbar ul li>a:hover i {
+     color: var(--main-color);
+}
+
+.icon {
+     background-color: var(--text-color-dark-heading);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: .4rem;
+     border-radius: 100%;
+     color: var(--bg-color);
+     font-size: 2rem;
+     border: var(--border-main-color);
+     border-color: var(--bg-color);
+}
+
+.navbar ul li>a:hover .icon {
+     background-color: var(--bg-color);
+     border-color: var(--main-color);
+}
+
+.drop-down {
+     position: absolute;
+     z-index: 101;
+     display: grid;
+     background-color: var(--bg-color);
+     top: 100%;
+     right: 0;
+     font-size: 1.4rem;
+     min-width: 15rem;
+     border: var(--border-main-color);
+     color: var(--text-color-dark-heading);
+     box-shadow: var(--box-shadow-drop-down);
+     border-bottom-right-radius: 1rem;
+     width: max-content;
+     opacity: 0;
+     height: 0;
      display: none;
-     cursor: pointer;
+     transition: opacity .2s ease;
+     transition: height .5s ease;
+}
+
+.drop-down>a {
+     font-weight: 700;
+     padding: 1.3rem;
+     border-bottom: var(--border-main-color);
+     color: var(--text-color-dark-heading);
+     text-transform: uppercase;
+}
+
+.drop-down>a:hover {
+     background-color: var(--bg-third-color);
+     color: var(--main-color);
+}
+
+.drop-down>a:last-child {
+     border-bottom-right-radius: inherit;
+     border-bottom: none;
+
+}
+
+.login {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem;
+}
+
+.drop-down.login {
+     display: none;
+     transition: opacity .2s ease;
+     transition: height .5s ease;
+}
+
+.login .line {
+     display: flex;
+     font-size: 1.4rem;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+     font-weight: 700;
+     padding: 1rem 0;
+}
+
+.login .line a {
+     color: var(--text-color-dark-heading);
+     font-size: 1.9rem;
+}
+
+.login .line a:hover {
+     color: var(--main-color);
+}
+
+.login form {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+
+}
+
+.login .input-box {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.login .input-box label {
+     font-weight: 600;
+}
+
+.login .input-box input {
+     font-size: 1.5rem;
+     border: var(--border-main-color);
+     padding: 1rem;
 }
 
 
+.login form h3 {
+     text-align: center;
+}
+
+.login form p {
+     font-size: 1.4rem;
+     padding-bottom: 2rem;
+}
+
+.social-link-box {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 2rem;
+     align-self: center;
+     padding-top: 2rem;
+     padding-bottom: 1rem;
+     border-top: var(--border-main-color);
+     /* border-color: var(--text-color-dark-heading); */
+}
+
+.social-link-box a {
+     font-size: 4rem;
+     color: var(--text-color-dark-heading);
+}
+
+.social-link-box a:hover {
+     color: var(--main-color);
+}
+
+.navbar ul li:hover>.drop-down,
+.navbar ul li:hover>.drop-down.login {
+     display: grid;
+     height: max-content;
+     opacity: 1;
+}
+
+#hamburg,
+#hamburg-hover {
+     font-size: 3.5rem;
+     color: var(--text-color-dark-heading);
+     cursor: pointer;
+     font-weight: normal;
+}
+
+#hamburg:hover,
+#hamburg-hover:hover {
+     color: var(--main-color);
+}
+
+#hamburg {
+     display: none;
+}
 
 
 /* responsive breakpoints less than 5200px  */
@@ -166,6 +391,10 @@ body {
 
      #hamburg {
           display: block;
+     }
+
+     .navbar {
+          display: none;
      }
 
      .active {
