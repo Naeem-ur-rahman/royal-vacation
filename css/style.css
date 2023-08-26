@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+/* font-family: 'Patua One', cursive; */
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     outline: none;
+     text-decoration: none;
+     border: none;
+     scroll-behavior: smooth;
+     font-family: 'Roboto', sans-serif;
+}
+
+:root {
+     --main-color: #000;
+     --bg-color: #fff;
+
+     --text-color-dark: #1f1d22;
+     --text-color-light: #fff;
+
+     --border: .1rem solid #ccc;
+     --border-white: : .1rem solid #fff;
+     --border-main-color: .1rem solid var(--main-color);
+
+     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+     --box-shadow-footer-links: 1px 1px 2px #6f6f6f;
+}
+
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+}
+
+body {
+     overflow-x: hidden;
+}
+
+.space {
+     height: 100vh;
+}
+
+.space.black {
+     background-color: rgb(49, 42, 42);
+}
+
+.space.white {
+     background-color: rgb(245, 235, 235);
+}
+
+.heading {
+     font-size: 3rem;
+     line-height: normal;
+     padding: 3rem 2rem 1rem;
+     color: var(--text-color-dark);
+     text-transform: capitalize;
+     text-align: start;
+     font-weight: 100;
+}
+
+.flex-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.header {
+     position: fixed;
+     top: 0;
+     right: 0;
+     width: 100%;
+     z-index: 100;
+}
+
+.header.sticky {
+     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+     height: 8rem;
+}
+
+#hamburg {
+     font-size: 3.5rem;
+     color: var(--text-color-light);
+     display: none;
+     cursor: pointer;
+}
+
+.links {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+}
+
+.links a {
+     font-size: 2rem;
+     border-radius: 10rem;
+     background-color: var(--bg-color);
+     color: var(--main-color);
+     padding: .5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.links a.blue:hover {
+     background-color: var(--light-blue);
+     color: var(--bg-color);
+}
+
+.links a.red:hover {
+     background-color: var(--red);
+     color: var(--bg-color);
+}
+
+.active {
+     display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive breakpoints less than 5200px  */
+
+@media (width<=5200px) {
+     html {
+          font-size: 220%;
+     }
+}
+
+@media (width<=5000px) {
+     html {
+          font-size: 200%;
+     }
+}
+
+@media (width<=4500px) {
+     html {
+          font-size: 180%;
+     }
+}
+
+@media (width<=4000px) {
+     html {
+          font-size: 160%;
+     }
+}
+
+@media (width<=3500px) {
+     html {
+          font-size: 140%;
+     }
+}
+
+@media (width<=3000px) {
+     html {
+          font-size: 120%;
+     }
+}
+
+@media (width<=2500px) {
+     html {
+          font-size: 100%;
+     }
+}
+
+@media (width<=2000px) {
+     html {
+          font-size: 80%;
+     }
+}
+
+@media (width<=1500px) {
+     html {
+          font-size: 60%;
+     }
+}
+
+@media (width<=1200px) {
+     html {
+          font-size: 55%;
+     }
+}
+
+@media (width<992px) {
+     html {
+          font-size: 50%;
+     }
+
+     #hamburg {
+          display: block;
+     }
+
+     .active {
+          display: block;
+     }
+}
+
+@media (width<778px) {
+     .heading {
+          font-size: 3rem;
+     }
+}
+
+@media (width<601px) {
+     html {
+          font-size: 48%;
+     }
+
+     .heading {
+          font-size: 2.5rem;
+     }
+}
+
+@media only screen and (max-width: 420px) {}
+
+@media (width <=350px) {}
