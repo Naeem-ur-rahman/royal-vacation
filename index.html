@@ -86,8 +86,173 @@
      </header>
 
 
-     <section class="space white"> </section>
+     <!-- Home section -->
+     <section id="home" class="home">
+          <!-- again new carosel  -->
+          <div class="carousel">
+               <div class="carousel-inner">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                         hidden="" checked="checked">
+                    <div class="carousel-item">
+                         <img src="img/homeCarosel/slide-1-desktop.jpg" alt="royal-vacation">
+                         <h3>A LUXURY EXPERIENCE</h3>
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                         hidden="">
+                    <div class="carousel-item">
+                         <img src="img/homeCarosel/slide-2-desktop.jpg" alt="royal-vacation">
+                         <h3>FAIRMONT MANAGED!</h3>
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                         hidden="">
+                    <div class="carousel-item">
+                         <img src="img/homeCarosel/slide-3-desktop.jpg" alt="royal-vacation">
+                         <h3>IN THE PERFECT LOCATION</h3>
+                    </div>
+                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-1" class="carousel-control next control-3">›</label>
+               </div>
+          </div>
+          <!-- Form home  -->
+          <div class="form-home">
+               <a><img src="img/hotel-icon.png" alt="icon-hotel">Hotels</a>
+               <div class="card">
+                    <form action="#">
+                         <div class="card-line">
+                              <div class="column">
+                                   <div class="input-box destination">
+                                        <label for="destination">Destination</label>
+                                        <input type="text" id="destination" placeholder="Search Destination">
+                                   </div>
+                                   <div class="input-box">
+                                        <label for="check-in">Check-In</label>
+                                        <input type="date" id="check-in">
+                                   </div>
+                              </div>
+                              <div class="column">
+                                   <div class="input-box">
+                                        <label for="check-out">Check-Out</label>
+                                        <input type="date" id="check-out">
+                                   </div>
+                                   <div class="input-box">
+                                        <label for="room">1 Room For</label>
+                                        <input type="number" value="2" id="room">
+                                   </div>
+                              </div>
+                              <div class="column">
+                                   <input class="btn" type="submit" value="Search">
+                              </div>
 
+                         </div>
+                         <h3>Additional Paramerters</h3>
+                         <div class="card-line">
+                              <div class="column">
+                                   <div class="input-check-box">
+                                        <label for="no-stars">No Stars</label>
+                                        <input type="checkbox" name="no-stars" id="no-stars">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="2-stars">2 Stars</label>
+                                        <input type="checkbox" name="2-stars" id="2-stars">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="3-stars">3 Stars</label>
+                                        <input type="checkbox" name="3-stars" id="3-stars">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="4-stars">4 Stars</label>
+                                        <input type="checkbox" name="4-stars" id="4-stars">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="5-stars">5 Stars</label>
+                                        <input type="checkbox" name="5-stars" id="5-stars">
+                                        <span class="checkmark"></span>
+                                   </div>
+                              </div>
+                              <div class="column">
+                                   <div class="input-check-box">
+                                        <label for="ro">RO</label>
+                                        <input type="checkbox" name="ro" id="ro">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="bb">BB</label>
+                                        <input type="checkbox" name="bb" id="bb">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="hb">HB</label>
+                                        <input type="checkbox" name="hb" id="hb">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="fb">FB</label>
+                                        <input type="checkbox" name="fb" id="fb">
+                                        <span class="checkmark"></span>
+                                   </div>
+                                   <div class="input-check-box">
+                                        <label for="ai">AI</label>
+                                        <input type="checkbox" name="ai" id="ai">
+                                        <span class="checkmark"></span>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="card-line">
+                              <div class="column">
+                                   <div class="input-select-box">
+                                        <label for="early-check-in">Early Check-In</label>
+                                        <select name="early-check-in" id="early-check-in">
+                                             <option value="">Select the time</option>
+                                             <option value="1:00">01:00</option>
+                                             <option value="2:00">02:00</option>
+                                             <option value="3:00">03:00</option>
+                                             <option value="4:00">04:00</option>
+                                             <option value="5:00">05:00</option>
+                                             <option value="6:00">06:00</option>
+                                             <option value="7:00">07:00</option>
+                                             <option value="8:00">08:00</option>
+                                             <option value="9:00">09:00</option>
+                                             <option value="10:00">10:00</option>
+                                        </select>
+                                   </div>
+                                   <div class="input-select-box">
+                                        <label for="late-check-out">Late Check-Out</label>
+                                        <select name="late-check-out" id="late-check-out">
+                                             <option value="">Select the time</option>
+                                             <option value="1:00">01:00</option>
+                                             <option value="2:00">02:00</option>
+                                             <option value="3:00">03:00</option>
+                                             <option value="4:00">04:00</option>
+                                             <option value="5:00">05:00</option>
+                                             <option value="6:00">06:00</option>
+                                             <option value="7:00">07:00</option>
+                                             <option value="8:00">08:00</option>
+                                             <option value="9:00">09:00</option>
+                                             <option value="10:00">10:00</option>
+                                        </select>
+                                   </div>
+                              </div>
+                              <div class="column">
+                                   <div class="box">
+                                        <input type="checkbox" id="free-cancel">
+                                        <label for="free-cancel">Free Cancelation</label>
+                                   </div>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </section>
+
+     <section class="space white"></section>
 </body>
 <script src="js/script.js"></script>
 

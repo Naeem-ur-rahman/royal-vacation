@@ -264,6 +264,7 @@ a {
      font-size: 1.5rem;
      border: var(--border-main-color);
      padding: 1rem;
+     width: 100%;
 }
 
 
@@ -322,6 +323,318 @@ a {
 }
 
 
+.home {
+     padding-top: 8rem;
+     position: relative;
+     min-height: 500px;
+     height: 100vh;
+     padding: 0;
+}
+
+.home .carousel {
+     max-width: 100vw;
+     max-height: 100vh;
+     min-height: 500px;
+}
+
+.carousel {
+     overflow: hidden;
+     width: 100%;
+     height: 100%;
+}
+
+.carousel-container {
+     display: flex;
+     transition: transform 0.5s ease;
+     width: 100%;
+     height: 100%;
+}
+
+.carousel {
+     position: relative;
+     /* box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64); */
+     /* margin-top: 150px; */
+}
+
+.carousel-inner {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     height: 100%;
+}
+
+.carousel-open:checked+.carousel-item {
+     position: static;
+     opacity: 100;
+}
+
+.carousel-item {
+     position: absolute;
+     opacity: 0;
+     -webkit-transition: opacity 1s ease-out;
+     transition: opacity 1s ease-out;
+     width: 100%;
+     height: 100%;
+}
+
+.carousel-item h3 {
+     position: absolute;
+     top: 30%;
+     font-size: 5rem;
+     color: var(--text-color-light);
+     font-weight: 600;
+     left: 0%;
+     width: 100%;
+     text-align: center;
+}
+
+.carousel-item img {
+     display: block;
+     height: 100%;
+     width: 100%;
+     max-width: 100%;
+     object-fit: cover;
+     object-position: center;
+}
+
+.carousel-control {
+     background: var(--bg-transparent-white-form);
+     border-radius: 50%;
+     color: var(--text-color-light);
+     cursor: pointer;
+     display: none;
+     font-size: 3.5rem;
+     height: 4rem;
+     line-height: 3.5rem;
+     position: absolute;
+     top: 45%;
+     -webkit-transform: translate(0, -50%);
+     cursor: pointer;
+     -ms-transform: translate(0, -50%);
+     transform: translate(0, -50%);
+     text-align: center;
+     width: 4rem;
+     z-index: 10;
+     user-select: none;
+     background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+     left: 2%;
+}
+
+.carousel-control.next {
+     right: 2%;
+}
+
+.carousel-control:hover {
+     background: var(--main-color);
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3,
+#carousel-4:checked~.control-4,
+#carousel-5:checked~.control-5 {
+     display: block;
+}
+
+.form-home {
+     width: 80%;
+     position: absolute;
+     top: 70%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     justify-content: start;
+}
+
+.form-home>a {
+     display: flex;
+     background-color: var(--main-color);
+     align-items: center;
+     justify-content: center;
+     width: fit-content;
+     color: var(--text-color-light);
+     padding: 1rem;
+     font-size: 1.4rem;
+}
+
+.form-home>a>img {
+     width: 3rem;
+}
+
+.form-home .card form {
+     background-color: var(--bg-color);
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     font-size: 1.4rem;
+     border-radius: .3rem;
+     border-top-left-radius: 0;
+}
+
+input,
+select {
+     font-size: 1.5rem;
+}
+
+.form-home .card form .card-line {
+     display: flex;
+     gap: 1rem;
+     width: 100%;
+}
+
+.form-home .input-box {
+     display: flex;
+     flex-direction: column;
+     border: var(--border-main-color);
+     border-radius: .5rem;
+     width: 100%;
+}
+
+.form-home .card-line:first-child .column {
+     display: flex;
+     gap: 1rem;
+     width: 100%;
+     height: 100%;
+}
+
+.form-home label {
+     padding: .5rem 1rem;
+     width: 100%;
+     color: grey;
+     font-weight: 600;
+}
+
+.form-home .input-box input {
+     padding: .1rem 1rem;
+     border-radius: inherit;
+     width: 100%;
+}
+
+.form-home .btn {
+     border: var(--border-main-color);
+     width: 100%;
+     height: 4.9rem;
+}
+
+.input-box.destination {
+     width: 200%;
+}
+
+.form-home .card-line:nth-last-child(2) .column {
+     border: var(--border-main-color);
+     border-radius: .5rem;
+}
+
+.input-check-box {
+     border-right: var(--border-main-color);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: .5rem 0rem;
+     gap: 1rem;
+     width: 100%;
+     height: 5rem;
+     position: relative;
+     user-select: none;
+}
+
+.input-check-box:last-child {
+     border-right: none;
+}
+
+.input-check-box:hover {
+     background-color: rgba(128, 128, 128, 0.048);
+}
+
+.input-check-box label {
+     width: 100%;
+     color: grey;
+     font-weight: 600;
+     text-align: center;
+     height: 100%;
+     cursor: pointer;
+     white-space: nowrap;
+}
+
+.input-check-box input {
+     display: none;
+}
+
+.input-check-box .checkmark {
+     background-color: rgba(128, 128, 128, 0.171);
+     width: 80%;
+     height: .3rem;
+     border-radius: 2rem;
+     margin: .5rem 0;
+     position: absolute;
+     bottom: .5rem;
+}
+
+.input-check-box input[type=checkbox]:checked~.checkmark {
+     background-color: var(--main-color);
+}
+
+.card-line .column {
+     display: flex;
+     align-items: center;
+     width: 100%;
+}
+
+.input-select-box {
+     display: flex;
+     flex-direction: column;
+     border: var(--border-main-color);
+     border-radius: .5rem;
+     width: 100%;
+}
+
+.form-home .input-select-box label {
+     padding: .5rem 1rem;
+     width: 100%;
+     color: grey;
+     font-weight: 600;
+}
+
+.form-home .input-select-box select {
+     padding: .1rem 1rem;
+     border-radius: inherit;
+}
+
+.form-home .box {
+     width: 100%;
+     align-items: center;
+     display: flex;
+     gap: 1rem;
+     padding: 1rem;
+     user-select: none;
+}
+
+.form-home .card-line:last-child .column {
+     display: flex;
+     gap: 1rem;
+     width: 100%;
+     height: 100%;
+}
+
+.form-home .box input {
+     height: 2rem;
+     width: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* responsive breakpoints less than 5200px  */
 
 @media (width<=5200px) {
@@ -341,6 +654,7 @@ a {
           font-size: 180%;
      }
 }
+
 
 @media (width<=4000px) {
      html {
@@ -439,11 +753,36 @@ a {
      .active {
           display: block;
      }
+
+     .input-box.destination {
+          width: 100%;
+     }
+
+     .form-home {
+          top: 60%;
+     }
+
+     .form-home .card-line:first-child {
+          flex-direction: column;
+     }
+
+     .carousel-item h3 {
+          top: 20%;
+          font-size: 4rem;
+     }
 }
 
 @media (width<=768px) {
      .heading {
           font-size: 3rem;
+     }
+
+     .form-home .card form .card-line:nth-last-child(2) {
+          flex-direction: column;
+     }
+
+     .carousel-item h3 {
+          top: 16%;
      }
 }
 
@@ -455,10 +794,46 @@ a {
      .heading {
           font-size: 2.5rem;
      }
+
+     .form-home .card-line:last-child {
+          flex-direction: column;
+     }
 }
 
 @media only screen and (max-width: 480px) {}
 
-@media only screen and (max-width: 414px) {}
+@media only screen and (max-width: 414px) {
+     .form-home .card form {
+          padding: 1rem;
+     }
+
+     .carousel-item h3 {
+          top: 15%;
+          font-size: 3rem;
+     }
+
+     .carousel-control.prev {
+          left: 1%;
+     }
+
+     .carousel-control.next {
+          right: 1%;
+     }
+
+}
+
+@media only screen and (max-width: 380px) {
+     .form-home {
+          width: 90%;
+     }
+
+     .carousel-control.prev {
+          left: 0%;
+     }
+
+     .carousel-control.next {
+          right: 0%;
+     }
+}
 
 @media only screen and (max-width: 320px) {}
