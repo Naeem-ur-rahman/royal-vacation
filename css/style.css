@@ -394,6 +394,45 @@ a {
      }
 
      .navbar {
+          position: absolute;
+          background-color: var(--bg-color);
+          top: 100%;
+          left: 0;
+          right: 0;
+          width: 100%;
+          min-height: 88vh;
+          padding-top: 1rem;
+          border-top: var(--border-main-color);
+          display: none;
+          transform: translateY(-100%);
+          transition: transform 1s ease;
+          overflow-y: scroll;
+     }
+
+     .navbar.active {
+          transition: transform 1s ease;
+     }
+
+     .navbar.active {
+          display: block;
+          transform: translateY(0%);
+     }
+
+     .navbar ul {
+          display: grid;
+          gap: 1rem;
+     }
+
+     .navbar ul>li>a {
+          padding-bottom: 1rem;
+          border-bottom: var(--border-main-color);
+     }
+
+     .navbar ul li:hover>.drop-down,
+     .navbar ul li:hover>.drop-down.login {
+          display: grid;
+          height: max-content;
+          position: static;
           display: none;
      }
 

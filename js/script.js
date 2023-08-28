@@ -16,41 +16,33 @@ window.addEventListener('DOMContentLoaded', () => {
           header.classList.toggle('sticky', window.scrollY > 50);
      };
 
-     //// this is to prevent menu list to not clickable
+     //navbar links script
+     let navbar_a = document.querySelectorAll('.navbar ul>li>a');
+     let navbar_dropdown = document.querySelectorAll('.drop-down');
+     for (let i = 0; i < navbar_a.length; i++) {
+          let click = new Array(true, true, true);
 
-
-     let anchorTags = document.querySelectorAll('.navbar ul > li > a.notclick');
-
-     if (window.matchMedia('(max-width: 991px)').matches) {
-          anchorTags.forEach((anchorTag) => {
-               anchorTag.addEventListener('click', (event) => {
-                    event.preventDefault();
-               });
+          navbar_a[i].addEventListener('click', () => {
+               if (window.matchMedia('(max-width: 991px)').matches) {
+                    if (click[i]) {
+                         for (let k = 0; k < navbar_a.length; k++) {
+                              navbar_dropdown[k].style = ''
+                              click[k] = true;
+                         }
+                         navbar_dropdown[i].style.position = 'static'
+                         navbar_dropdown[i].style.display = 'grid'
+                         click[i] = false;
+                    } else {
+                         navbar_dropdown[i].style = ''
+                         click[i] = true;
+                    }
+               } else {
+                    for (let k = 0; k < navbar_a.length; k++) {
+                         navbar_dropdown[k].style = ''
+                         click[k] = true;
+                    }
+               }
           });
      }
-
-     // header scroll script
-
-     window.addEventListener('scroll', function () {
-          var topHeader = document.querySelector('.header-top');
-          var bottomHeaderlogo = document.querySelector('.header-down-logo');
-          var bottomHeaderLinks = document.querySelector('header > .header-down > .links');
-          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-          if (scrollTop > 0) {
-               topHeader.classList.add('hide');
-               bottomHeaderlogo.classList.add('active');
-               if (window.matchMedia('(max-width: 991px)').matches) {
-                    bottomHeaderLinks.classList.add('none');
-               }
-          } else {
-               topHeader.classList.remove('hide');
-               bottomHeaderlogo.classList.remove('active');
-               bottomHeaderLinks.classList.remove('none');
-
-          }
-     });
-
-
 
 });
