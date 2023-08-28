@@ -46,3 +46,38 @@ window.addEventListener('DOMContentLoaded', () => {
      }
 
 });
+
+//destination Slider
+
+function prev_destination() {
+     const width = getWindowWidth();
+     const slide = document.getElementById('slider-container-destination');
+     if (width <= 420) {
+          slide.scrollLeft -= (width - 20);
+     } else if (width < 778) {
+          slide.scrollLeft -= (width / 2);
+     } else if (width < 1200) {
+          slide.scrollLeft -= (width / 3);
+     } else {
+          slide.scrollLeft -= (width / 3);
+     }
+}
+
+function next_destination() {
+     const width = getWindowWidth();
+     const slide = document.getElementById('slider-container-destination');
+     if (width <= 420) {
+          slide.scrollLeft += (width - 20);
+     } else if (width < 778) {
+          slide.scrollLeft += (width / 2);
+     } else if (width < 1200) {
+          slide.scrollLeft += (width / 3);
+     } else {
+          slide.scrollLeft += (width / 3);
+     }
+}
+
+function getWindowWidth() {
+     const windowWidth = window.innerWidth;
+     return windowWidth;
+}

@@ -8,6 +8,9 @@
      <link rel="stylesheet" href="css/style.css">
      <!-- boxicons link -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!-- swiper js -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
      <title>Royal Vacation</title>
 </head>
 
@@ -252,8 +255,92 @@
           </div>
      </section>
 
+     <!-- Best Destination -->
+     <section class="best-destination">
+          <h2 class="heading"><span>BEST</span> DESTINATION</h2>
+          <p class="heading-1">OUR FAVORITE HOTEL</p>
+
+          <div class="swiper mySwiper">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/dubai.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> Dubai</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/london.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> London</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/madrid.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> Madrid</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/munich.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> Munich</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/paris.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> Paris</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="slide-box">
+                              <img src="img/destinationHotels/rome.jpg" alt="">
+                              <div class="content">
+                                   <a href="#"><i class='bx bxs-map'></i> Rome</a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+          </div>
+     </section>
+
      <section class="space white"></section>
 </body>
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+     var swiper = new Swiper(".mySwiper", {
+          // slidesPerView: 3,
+          spaceBetween: 30,
+          navigation: {
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
+               color: '#ac863b'
+          }, breakpoints: {
+               600: {
+                    slidesPerView: 2,
+               },
+               991: {
+                    slidesPerView: 3,
+               },
+               1024: {
+                    slidesPerView: 3,
+               }
+          },
+     });
+</script>
 
 </html>

@@ -75,11 +75,25 @@ a {
 .heading {
      font-size: 3rem;
      line-height: normal;
-     padding: 3rem 2rem 1rem;
+     padding: 1rem 0;
      color: var(--text-color-dark);
      text-transform: capitalize;
      text-align: start;
-     font-weight: 100;
+     font-weight: 400;
+}
+
+.heading span {
+     color: var(--main-color);
+}
+
+.heading-1 {
+     font-size: 1.8rem;
+     line-height: normal;
+     padding: .5rem 0;
+     color: var(--text-color-dark);
+     text-transform: capitalize;
+     text-align: start;
+     font-weight: 400;
 }
 
 .flex-center {
@@ -625,15 +639,57 @@ select {
      width: 2rem;
 }
 
+/* Destination section */
 
+.best-destination {
+     background-color: var(--bg-second-color);
+     /* position: relative; */
+}
 
+.swiper {
+     width: 100%;
+     height: 100%;
+     padding: 3rem 0 !important;
+}
 
+.swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     user-select: none;
+     box-shadow: var(--box-shadow-products);
+}
 
+.swiper-slide img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
 
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+     color: var(--main-color) !important;
+}
 
+.swiper-button-next {
+     right: 0 !important;
+}
 
+.swiper-button-prev {
+     left: 0 !important;
+}
 
+.slide-box .content {
+     padding: 2rem 0;
+}
 
+.slide-box .content a {
+     color: var(--main-color);
+}
 
 /* responsive breakpoints less than 5200px  */
 
