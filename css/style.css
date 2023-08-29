@@ -79,7 +79,7 @@ a {
      color: var(--text-color-dark);
      text-transform: capitalize;
      text-align: start;
-     font-weight: 400;
+     font-weight: 500;
 }
 
 .heading span {
@@ -93,7 +93,7 @@ a {
      color: var(--text-color-dark);
      text-transform: capitalize;
      text-align: start;
-     font-weight: 400;
+     font-weight: 500;
 }
 
 .flex-center {
@@ -643,7 +643,6 @@ select {
 
 .best-destination {
      background-color: var(--bg-second-color);
-     /* position: relative; */
 }
 
 .swiper {
@@ -655,12 +654,21 @@ select {
 .swiper-slide {
      text-align: center;
      font-size: 18px;
-     background: #fff;
      display: flex;
      justify-content: center;
      align-items: center;
      user-select: none;
+}
+
+.swiper-slide .slide-box {
+     background: #fff;
+     transition: .3s ease;
+     cursor: pointer;
      box-shadow: var(--box-shadow-products);
+}
+
+.swiper-slide .slide-box:hover {
+     transform: scale(1.05);
 }
 
 .swiper-slide img {
@@ -685,11 +693,61 @@ select {
 
 .slide-box .content {
      padding: 2rem 0;
+     width: 100%;
+}
+
+#best-destination .slide-box .content a {
+     color: var(--main-color);
+}
+
+/* Featured Section */
+.space-between {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.slide-box .content .heading-1 {
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: 600;
+     color: var(--main-color);
 }
 
 .slide-box .content a {
-     color: var(--main-color);
+     color: var(--text-color-dark-heading);
 }
+
+#featured .swiper {
+     height: 45rem;
+}
+
+#featured .swiper-slide {
+     height: 100%;
+}
+
+.image-box {
+     position: relative;
+}
+
+.stars {
+     color: var(--star-color);
+     background-color: var(--bg-color);
+     position: absolute;
+     bottom: 1rem;
+     left: 1rem;
+     display: flex;
+     align-items: center;
+     padding: .5rem;
+}
+
+
+
+
+
+
+
+
 
 /* responsive breakpoints less than 5200px  */
 
