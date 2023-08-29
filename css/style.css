@@ -694,6 +694,7 @@ select {
 .slide-box .content {
      padding: 2rem 0;
      width: 100%;
+     font-size: 2rem;
 }
 
 #best-destination .slide-box .content a {
@@ -728,6 +729,7 @@ select {
 
 .image-box {
      position: relative;
+     display: inline-block;
 }
 
 .stars {
@@ -742,11 +744,139 @@ select {
 }
 
 
+/* Adventure Section */
 
+.adventure {
+     padding-left: 0;
+     padding-right: 0;
+}
 
+.adventure .heading {
+     padding-left: 3%;
+     padding-right: 3%;
+     padding-bottom: 5rem;
+}
 
+.adventure-grid-container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+     transition: 1s;
+     padding-bottom: 4rem;
+}
 
+.adventure-grid-container:has(.one) {
+     transition: 1s ease;
+}
 
+.adventure-grid-container:has(.one:hover) {
+     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0fr;
+}
+
+.adventure-grid-container:has(.two:hover) {
+     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0fr;
+}
+
+.adventure-grid-container:has(.three:hover) {
+     grid-template-columns: 1fr 1fr 2fr 1fr 1fr 0fr;
+}
+
+.adventure-grid-container:has(.four:hover) {
+     grid-template-columns: 1fr 1fr 1fr 2fr 1fr 0fr;
+}
+
+.adventure-grid-container:has(.five:hover) {
+     grid-template-columns: 1fr 1fr 1fr 1fr 2fr 0fr;
+}
+
+.adventure-grid-container:has(.six:hover) {
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr .7fr;
+}
+
+.adventure-item {
+     height: 48rem;
+     transition: .5s ease;
+     position: relative;
+     overflow: hidden;
+}
+
+.adventure-item.six {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--text-color-light);
+     background-color: var(--main-color);
+     font-size: 4rem;
+
+}
+
+.adventure-item::after {
+     content: '';
+     position: absolute;
+     inset: 0;
+     background-color: var(--bg-transparent-main);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--text-color-light);
+     font-size: 2.2rem;
+     font-weight: 600;
+     transition: .5s ease;
+     text-align: center;
+}
+
+.adventure-item.one::after {
+     content: 'Dhow Cruise';
+}
+
+.adventure-item.two::after {
+     content: 'Safari Adventure';
+}
+
+.adventure-item.three::after {
+     content: 'Dubai City Tour';
+}
+
+.adventure-item.four::after {
+     content: 'Dubai Dolphinarium';
+}
+
+.adventure-item.five::after {
+     content: 'Ferrari World Tour';
+}
+
+.adventure-item:hover::after {
+     opacity: 0;
+}
+
+.adventure-layer {
+     background-color: var(--bg-transparent-main);
+     color: var(--text-color-light);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 1rem;
+     transform: translateY(100%);
+     transition: .5s ease;
+}
+
+.adventure-layer h2 {
+     font-size: 2rem;
+}
+
+.adventure-layer p {
+     font-size: 1.4rem;
+}
+
+.adventure-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+.adventure-item:hover .adventure-layer {
+     transform: translateY(0);
+}
 
 
 /* responsive breakpoints less than 5200px  */
@@ -897,6 +1027,22 @@ select {
 
      .carousel-item h3 {
           top: 16%;
+     }
+
+     .adventure-grid-container {
+          grid-template-columns: 1fr;
+     }
+
+     .adventure-item {
+          height: 30rem;
+     }
+
+     .adventure-item.six {
+          height: 10rem;
+     }
+
+     .adventure-grid-container:has(.adventure-item:hover) {
+          grid-template-columns: 1fr;
      }
 }
 
