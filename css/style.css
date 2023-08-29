@@ -878,6 +878,66 @@ select {
      transform: translateY(0);
 }
 
+.near-by-grid-container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 3rem;
+     padding: 4rem 0;
+}
+
+.near-by-item {
+     overflow: hidden;
+     height: 40rem;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.near-by-item:hover img {
+     transform: scale(1.2);
+}
+
+.near-by-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+     transition: 2s ease;
+}
+
+.near-by-item.first-two-fr {
+     grid-column: 1/3;
+}
+
+.near-by-item.last-two-fr {
+     grid-column: 2/4;
+}
+
+.near-by-item .btn {
+     position: absolute;
+     top: 80%;
+     z-index: 1;
+     transition: 1s ease;
+}
+
+.near-by-item::after {
+     transition: 2s ease;
+     position: absolute;
+     content: '';
+     inset: 0;
+     background-color: var(--bg-transparent-main);
+     position: absolute;
+     opacity: 0;
+}
+
+.near-by-item:hover::after {
+     opacity: 1;
+}
+
+.near-by-item:hover .btn {
+     top: 50%;
+}
 
 /* responsive breakpoints less than 5200px  */
 
@@ -1014,6 +1074,14 @@ select {
           top: 20%;
           font-size: 4rem;
      }
+
+     .near-by-grid-container {
+          gap: 2rem;
+     }
+
+     .near-by-item {
+          height: 30rem;
+     }
 }
 
 @media (width<=768px) {
@@ -1057,6 +1125,18 @@ select {
 
      .form-home .card-line:last-child {
           flex-direction: column;
+     }
+
+     .near-by-grid-container {
+          grid-template-columns: 1fr;
+     }
+
+     .near-by-item.first-two-fr {
+          grid-column: auto;
+     }
+
+     .near-by-item.last-two-fr {
+          grid-column: auto;
      }
 }
 
