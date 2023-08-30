@@ -128,6 +128,7 @@ a {
      justify-content: space-between;
      align-items: center;
      background-color: var(--bg-color);
+     transition: height .5s ease;
 }
 
 .header.sticky {
@@ -136,6 +137,7 @@ a {
 
 .logo img {
      height: 8rem;
+     transition: height .5s ease;
 }
 
 .navbar {

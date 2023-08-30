@@ -46,3 +46,17 @@ window.addEventListener('DOMContentLoaded', () => {
      }
 
 });
+
+window.addEventListener('scroll', function () {
+     var header = document.querySelector('.header');
+     var headerLogo = document.querySelector('.header .logo img');
+
+     if (window.scrollY > 0) {
+          header.style.height = '6rem';
+          headerLogo.style.height = '6rem';
+     } else {
+          header.style.height = '8rem';
+          headerLogo.style.height = '8rem';
+     }
+
+});
