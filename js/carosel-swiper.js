@@ -65,3 +65,31 @@ var swiper = new Swiper("#featured-2", {
           reverseDirection: true,
      },
 });
+
+var swiper = new Swiper("#supplier", {
+     initialSlide: 1,
+     pagination: {
+          el: ".swiper-pagination",
+     },
+     breakpoints: {
+          320: {
+               slidesPerView: 2,
+          },
+          480: {
+               slidesPerView: 3,
+          },
+          600: {
+               slidesPerView: 4,
+          },
+          991: {
+               slidesPerView: 5,
+          },
+          1024: {
+               slidesPerView: 6,
+          }
+     },
+     autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+     },
+});
