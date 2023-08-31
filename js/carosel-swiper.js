@@ -93,3 +93,18 @@ var swiper = new Swiper("#supplier", {
           disableOnInteraction: false,
      },
 });
+
+
+var swiper = new Swiper("#search-product-slider", {
+     slidesPerView: 1,
+     initialSlide: 1,
+     navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          color: '#ac863b'
+     },
+     autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+     },
+});
