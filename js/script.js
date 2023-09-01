@@ -77,6 +77,42 @@ window.addEventListener('DOMContentLoaded', () => {
           }
      });
 
+     // Toogle search region page buttons
+     let toggle_cards = document.querySelectorAll('.toogle-btn');
+     toggle_cards.forEach(card => {
+          let search_line = card.querySelectorAll('.search-line');
+          let btn = card.querySelector('h2 i');
+          btn.addEventListener('click', () => {
+               search_line.forEach(line => {
+                    line.classList.toggle('hidden');
+               });
+               btn.classList.toggle('bxs-up-arrow');
+          });
+     });
+
+     function HideCardData() {
+          let btns = document.querySelectorAll('.toogle-btn h2 i');
+          let allSearchLine = document.querySelectorAll('.search-line')
+          if (window.matchMedia('(max-width: 600px)').matches) {
+               allSearchLine.forEach(line => {
+                    line.classList.add('hidden');
+               });
+               btns.forEach(btn => {
+                    btn.classList.add('bxs-up-arrow');
+               });
+          } else {
+               allSearchLine.forEach(line => {
+                    line.classList.remove('hidden');
+               });
+               btns.forEach(btn => {
+                    btn.classList.remove('bxs-up-arrow');
+               });
+          }
+     }
+     // Automatically hide the card data on mobile view
+     window.addEventListener('load', HideCardData);
+     window.addEventListener('resize', HideCardData);
+
 });
 
 window.addEventListener('scroll', function () {
