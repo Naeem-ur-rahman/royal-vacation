@@ -108,3 +108,22 @@ var swiper = new Swiper("#search-product-slider", {
           disableOnInteraction: false,
      },
 });
+
+
+// Galllery Carosel Search Deatil page
+var swiper_thumbs = new Swiper("#gallery-thumb", {
+     spaceBetween: 10,
+     slidesPerView: 4,
+     freeMode: true,
+     watchSlidesProgress: true,
+});
+
+var swiper_gallery = new Swiper("#gallery-slider", {
+     navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+     },
+     thumbs: {
+          swiper: swiper_thumbs,
+     },
+});
