@@ -2067,7 +2067,7 @@ a.text-black.main-color {
      }
 
      /* Search detail page */
-     .search-detail-form {
+     .card-search.search-detail-form {
           display: none;
      }
 
@@ -2164,7 +2164,7 @@ a.text-black.main-color {
      }
 
      .card-search.gallery #gallery-slider {
-          height: 100%;
+          height: max-content;
      }
 
      .search-detail-blog-grid {
