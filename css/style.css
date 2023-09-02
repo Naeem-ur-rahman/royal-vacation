@@ -1359,7 +1359,7 @@ p.about-text-footer {
      object-fit: cover;
 }
 
-.card-product-search .right .stars {
+.card-product-search>.right .stars {
      position: static;
 }
 
@@ -1477,7 +1477,7 @@ p.about-text-footer {
      background-color: var(--bg-third-color);
 }
 
-.search-detail-grid .left {
+.search-detail-grid>.left {
      display: flex;
      flex-direction: column;
      gap: 1rem;
@@ -1517,14 +1517,14 @@ p.about-text-footer {
 }
 
 
-.card-search.space-between .left {
+.card-search.space-between>.left {
      display: flex;
      gap: 1rem;
      align-items: center;
      flex-direction: row;
 }
 
-.card-search.space-between .left .heart-product {
+.card-search.space-between>.left .heart-product {
      font-size: 2.5rem;
      background-color: var(--bg-third-color);
      color: var(--text-color-dark-heading);
@@ -1539,32 +1539,32 @@ p.about-text-footer {
      border-radius: 100rem;
 }
 
-.card-search.space-between .left .content h1 {
+.card-search.space-between>.left .content h1 {
      color: var(--main-color);
 }
 
-.card-search.space-between .left .content a {
+.card-search.space-between>.left .content a {
      color: var(--main-color);
 }
 
-.card-search.space-between .left .content a i {
+.card-search.space-between>.left .content a i {
      font-size: 1.7rem;
 }
 
-.card-search.space-between .right {
+.card-search.space-between>.right {
      display: flex;
      flex-direction: column;
      gap: 1rem;
      background-color: var(--bg-color);
 }
 
-.card-search.space-between .right p {
+.card-search.space-between>.right p {
      color: var(--text-color-dark-heading);
      font-size: 2rem;
      font-weight: 600;
 }
 
-.card-search.space-between .right .btn {
+.card-search.space-between>.right .btn {
      border: var(--border-main-color);
      text-align: center;
 }
@@ -1575,7 +1575,7 @@ p.about-text-footer {
 
 /* Gallery Carosel start */
 
-.card-search.gallery .left {
+.card-search.gallery>.left {
      width: 75%;
      background-color: var(--bg-third-color);
      position: relative;
@@ -1652,7 +1652,7 @@ p.about-text-footer {
 
 /* Gallery Carosel end */
 
-.card-search.gallery .right {
+.card-search.gallery>.right {
      width: 100%;
      padding: 1rem;
      position: relative;
@@ -1679,7 +1679,7 @@ p.green {
      width: 70%;
 }
 
-.search-detail-grid .right h2 {
+.search-detail-grid>.right h2 {
      font-size: 1.7rem;
      color: var(--text-color-dark);
      font-weight: 500;
@@ -1767,15 +1767,63 @@ a.text-black.main-color {
      border-right: var(--border);
 }
 
+.card-search.check {
+     display: flex;
+     gap: 3rem;
+     flex-wrap: wrap;
+}
 
+.card-search.check>div {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
 
+.up-room {
+     display: flex;
+     border-radius: .5rem;
+}
 
+.up-room>.left {
+     width: 40%;
+     border: var(--border);
+     border-top-left-radius: inherit;
+     border-bottom-left-radius: inherit;
+     padding: .1rem;
+     border-right: none;
+     /* height: 100%; */
+}
 
+.up-room>.left img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: inherit;
+     cursor: pointer;
+}
 
+.up-room>.right {
+     padding: 1rem;
+     border: var(--border);
+     border-top-right-radius: inherit;
+     border-bottom-right-radius: inherit;
+     width: 100%;
+     border-left: none;
+}
 
+.keywords {
+     padding-top: .5rem;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
 
-
-
+.keywords>p {
+     font-size: 1.4rem;
+     padding: .5rem;
+     background-color: var(--bg-second-color);
+     border-radius: .1rem;
+}
 
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
@@ -2121,6 +2169,21 @@ a.text-black.main-color {
 
      .search-detail-blog-grid {
           grid-template-columns: 1fr;
+     }
+
+     .up-room {
+          flex-direction: column;
+     }
+
+     .up-room>.left {
+          width: 100%;
+          border-radius: inherit;
+          border: none;
+     }
+
+     .up-room>.right {
+          border: var(--border);
+          border-radius: inherit;
      }
 }
 
