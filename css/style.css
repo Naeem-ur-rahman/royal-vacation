@@ -1216,7 +1216,6 @@ p.about-text-footer {
      background-color: var(--bg-color);
      border-radius: .2rem;
      padding: 1.5rem;
-     user-select: none;
 }
 
 .card-search p {
@@ -1469,12 +1468,15 @@ p.about-text-footer {
      color: var(--text-color-dark);
 }
 
+/* Search deatil page */
+
 .search-detail-grid {
      padding-top: 8rem;
      display: grid;
      min-height: 100vh;
      grid-template-columns: 75% 35%;
      background-color: var(--bg-third-color);
+     padding-bottom: 5rem;
 }
 
 .search-detail-grid>.left {
@@ -1853,16 +1855,12 @@ a.text-black.main-color {
      color: red;
 }
 
-.table-item.bg-dark {
-     background-color: var(--text-color-dark-heading);
-     color: var(--text-color-light);
-     border-color: var(--bg-color);
-}
-
 .table-item.price {
      font-size: 2rem;
      font-weight: 600;
      justify-content: center;
+
+     background-color: #e8e8e8;
 }
 
 .table-item.booking {
@@ -1874,6 +1872,9 @@ a.text-black.main-color {
      font-size: 2rem;
      font-weight: 500;
      justify-content: start;
+     background-color: var(--text-color-dark-heading);
+     color: var(--text-color-light);
+     border-color: var(--bg-color);
 }
 
 i.info-btn {
@@ -1981,6 +1982,31 @@ i.info-btn:hover .info-card {
      gap: 1rem;
      justify-content: space-between;
 }
+
+.card-search.description {
+     display: flex;
+     gap: 1rem;
+}
+
+.card-search.description p {
+     font-size: 1.5rem;
+}
+
+.card-search.description .left h3 {
+     font-size: 1.5rem;
+     color: var(--text-color-dark);
+     padding: 1rem 0;
+}
+
+.card-search.description .heading-black {
+     color: black;
+     padding: 1rem 0;
+}
+
+.card-search.description .right {
+     width: 100%;
+}
+
 
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
@@ -2376,6 +2402,10 @@ i.info-btn:hover .info-card {
      .info-card.price {
           right: -22rem;
           top: 3rem;
+     }
+
+     .card-search.description {
+          flex-direction: column;
      }
 }
 
