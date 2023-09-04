@@ -1832,7 +1832,7 @@ a.text-black.main-color {
 
 .table-item {
      font-size: 1.5rem;
-     padding: 1rem;
+     padding: 1.5rem;
      font-weight: 500;
      border: var(--border);
      display: flex;
@@ -1849,6 +1849,10 @@ a.text-black.main-color {
      color: var(--bg--green);
 }
 
+.red {
+     color: red;
+}
+
 .table-item.bg-dark {
      background-color: var(--text-color-dark-heading);
      color: var(--text-color-light);
@@ -1858,24 +1862,125 @@ a.text-black.main-color {
 .table-item.price {
      font-size: 2rem;
      font-weight: 600;
+     justify-content: center;
+}
+
+.table-item.booking {
+     text-align: center;
+     justify-content: center;
+}
+
+.table-item.th {
+     font-size: 2rem;
+     font-weight: 500;
+     justify-content: start;
 }
 
 i.info-btn {
      cursor: pointer;
      font-size: 1.7rem;
+     position: relative;
 }
 
 
+.info-card {
+     position: absolute;
+     padding: 1rem;
+     background-color: var(--text-color-dark-heading);
+     color: var(--text-color-light);
+     width: max-content;
+     right: 0;
+     border-radius: 1rem;
+     transition: .3s ease;
+     opacity: 0;
+     z-index: -1;
+}
+
+i.info-btn:hover .info-card {
+     z-index: 1;
+     opacity: 1;
+}
 
 
+.info-card h2 {
+     color: var(--text-color-light);
+     font-size: 1.7rem;
+     font-weight: 700;
+}
 
+.info-card p {
+     color: var(--text-color-light);
+     font-weight: 400;
+     padding-top: 1rem;
+     font-size: 1.3rem;
+     display: flex;
+     gap: .2rem;
+}
 
+.info-card p>i {
+     transform: rotate(90deg);
+}
 
+.info-card.price {
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     width: 38rem;
+     top: 3.5rem;
+}
 
+.info-card.price .top {
+     display: flex;
+     gap: 1rem;
+     position: relative;
+}
 
+.info-card.price .top::before {
+     content: '';
+     top: -2.7rem;
+     right: 0rem;
+     z-index: -1;
+     border: var(--border);
+     border-color: var(--text-color-dark-heading);
+     border-width: 1rem;
+     position: absolute;
+     transform: rotate(45deg);
+}
 
+.info-card.price .top .box {
+     height: 7rem;
+     padding: 1rem 0;
+}
 
+.info-card.price .top>.left {
+     padding: 1rem;
+}
 
+.info-card.price .top>.right {
+     background-color: var(--text-color-dark);
+     padding: 1rem;
+     border-radius: 1rem;
+}
+
+.info-card.price .top .box {
+     border-bottom: var(--border);
+}
+
+.info-card.price .down {
+     display: flex;
+     gap: 2rem;
+     padding: 1rem 0;
+}
+
+.info-card.price .down .box {
+     padding: 1rem;
+}
+
+.info-card.price .down .box p {
+     display: flex;
+     gap: 1rem;
+     justify-content: space-between;
+}
 
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
@@ -2236,6 +2341,41 @@ i.info-btn {
      .up-room>.right {
           border: var(--border);
           border-radius: inherit;
+     }
+
+     .table-item.cancel {
+          display: none;
+     }
+
+     .table-item.room {
+          border-bottom: none;
+     }
+
+     .table-item.meal {
+          border-bottom: none;
+     }
+
+     .table-item.price {
+          border-top: none;
+     }
+
+     .table-item.booking {
+          border-top: none;
+          justify-content: center;
+          text-align: center;
+     }
+
+     .table-item.booking.th {
+          justify-content: start;
+     }
+
+     .room-table-grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+
+     .info-card.price {
+          right: -22rem;
+          top: 3rem;
      }
 }
 
