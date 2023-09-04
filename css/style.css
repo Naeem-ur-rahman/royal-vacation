@@ -2030,6 +2030,68 @@ i.info-btn:hover .info-card {
      padding: .5rem 0;
 }
 
+.card-search.policies>h2 {
+     padding-bottom: 2rem;
+     color: var(--main-color);
+}
+
+.visa-info {
+     border: var(--border);
+     border-radius: 1rem;
+     margin-bottom: 2rem;
+}
+
+.visa-info p {
+     padding: 2rem;
+     font-size: 1.6rem;
+}
+
+.visa-info>h2 {
+     padding: 2rem;
+     background-color: rgba(219, 218, 218, 0.507);
+     border-top-left-radius: inherit;
+     border-top-right-radius: inherit;
+}
+
+.visa-info .grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem;
+}
+
+.payment-item {
+     padding: 1rem;
+     display: grid;
+     gap: 1rem;
+}
+
+.payment-item p {
+     padding: .5rem;
+     display: block;
+}
+
+.payment-item img {
+     height: 3rem;
+     padding: .3rem;
+}
+
+.payment-item a {
+     color: var(--main-color);
+}
+
+.payment-item .btn {
+     color: var(--text-color-light);
+     text-align: center;
+}
+
+.payment-item .btn:hover {
+     color: var(--main-color);
+}
+
+
+
+
+
 
 
 
@@ -2450,6 +2512,10 @@ i.info-btn:hover .info-card {
 @media only screen and (max-width: 480px) {
      .card-search.amenities-detail>.grid {
           grid-template-columns: 1fr
+     }
+
+     .visa-info .grid {
+          grid-template-columns: 1fr;
      }
 }
 
