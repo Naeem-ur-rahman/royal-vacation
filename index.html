@@ -154,9 +154,59 @@
                                    </div>
                               </div>
                               <div class="column">
-                                   <div class="input-box">
-                                        <label for="room">1 Room For</label>
-                                        <input type="number" value="2" id="room">
+                                   <div class="input-box" id="room-input-box">
+                                        <label for="room" id="room-label">1 Room For</label>
+                                        <input type="number" disabled value="2" id="room">
+                                        <div class="room-container">
+                                             <div class="rooms-item">
+                                                  <h2 class="heading-black">1 Room</h2>
+                                                  <div class="adult-box-container">
+                                                       <div class="adult-box">
+                                                            <div class="line-text">
+                                                                 Audits
+                                                            </div>
+                                                            <div class="line-input adult">
+                                                                 <span id="adult_dec" onclick="adult(false)">-</span>
+                                                                 <span id="adult-value">2</span>
+                                                                 <span id="adult_inc" onclick="adult(true)">+</span>
+                                                            </div>
+                                                       </div>
+                                                       <div class="adult-box">
+                                                            <div class="line-text">
+                                                                 Childern
+                                                            </div>
+                                                            <div class="line-input child">
+                                                                 <span>
+                                                                      <span class="btn"> Add Child</span>
+                                                                      <select name="childern" class="" id="childern">
+                                                                           <option value="1">1 year</option>
+                                                                           <option value="2">2 year</option>
+                                                                           <option value="3">3 year</option>
+                                                                           <option value="4">4 year</option>
+                                                                           <option value="5">5 year</option>
+                                                                           <option value="6">6 year</option>
+                                                                           <option value="7">7 year</option>
+                                                                           <option value="8">8 year</option>
+                                                                           <option value="9">9 year</option>
+                                                                           <option value="10">10 year</option>
+                                                                           <option value="11">11 year</option>
+                                                                           <option value="12">12 year</option>
+                                                                           <option value="13">13 year</option>
+                                                                           <option value="14">14 year</option>
+                                                                           <option value="15">15 year</option>
+                                                                           <option value="16">16 year</option>
+                                                                           <option value="17">17 year</option>
+                                                                      </select>
+                                                                 </span>
+                                                                 <div class="keywords">
+
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <a class="btn" id="room-done">Done</a>
+                                        </div>
                                    </div>
                                    <a href="search-region.html" class="btn">Search</a>
                               </div>
@@ -728,5 +778,6 @@
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/carosel-swiper.js"></script>
+<script src="js/rooms.js"></script>
 
 </html>
