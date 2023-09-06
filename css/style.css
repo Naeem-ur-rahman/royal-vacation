@@ -535,6 +535,7 @@ select {
      border: var(--border-main-color);
      width: 100%;
      height: 4.9rem;
+     border-radius: .5rem;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -1461,6 +1462,7 @@ p.about-text-footer {
      display: flex;
      background-color: var(--bg-color);
      border-radius: .5rem;
+     box-shadow: 0 .3rem .3rem rgb(41 47 55 / 10%);
 }
 
 
