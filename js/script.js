@@ -48,23 +48,27 @@ window.addEventListener('DOMContentLoaded', () => {
      // Map view code on button click listner
      let list_view = document.getElementById('list-view');
      let map_view = document.getElementById('map-view');
-     let right_search = document.querySelector('.search-right');
+     // let right_search = document.querySelector('.search-right');
+     let search_region_grid = document.querySelector('.search-region-grid');
      let expand_map = document.querySelector('.search-right .btn');
      let check = true;
      list_view.addEventListener('click', () => {
-          right_search.classList.remove('active');
+          // right_search.classList.remove('active');
+          search_region_grid.classList.remove('map-active');
           list_view.classList.add('active');
           map_view.classList.remove('active');
           check = true;
      });
      map_view.addEventListener('click', () => {
-          right_search.classList.add('active');
+          // right_search.classList.add('active');
+          search_region_grid.classList.add('map-active');
           map_view.classList.add('active');
           list_view.classList.remove('active');
           check = false;
      });
      expand_map.addEventListener('click', () => {
-          right_search.classList.toggle('active');
+          // right_search.classList.toggle('active');
+          search_region_grid.classList.toggle('map-active');
 
           if (check) {
                map_view.classList.add('active');

@@ -1279,6 +1279,11 @@ p.about-text-footer {
      display: grid;
      min-height: 100vh;
      grid-template-columns: 30rem auto 13%;
+     background-color: var(--bg-third-color);
+}
+
+.search-region-grid.map-active {
+     grid-template-columns: 30rem 40rem auto;
 }
 
 .search-left {
@@ -1306,6 +1311,7 @@ p.about-text-footer {
      position: relative;
      padding-top: 5rem;
      transition: all .5s ease;
+     height: 100vh;
 }
 
 .search-right .btn {
@@ -1456,6 +1462,31 @@ p.about-text-footer {
      background-color: var(--bg-color);
      border-radius: .5rem;
 }
+
+
+/* Product in map active start code */
+
+.search-region-grid.map-active .card-product-search {
+     flex-direction: column;
+}
+
+.search-region-grid.map-active #search-product-slider.swiper {
+     height: 100%;
+}
+
+.search-region-grid.map-active .card-product-search .left {
+     width: 100%;
+}
+
+.search-region-grid.map-active #search-product-slider.swiper {
+     width: 39rem;
+}
+
+.search-region-grid.map-active .tag {
+     right: 0;
+}
+
+/* Product in map active end code */
 
 
 .card-product-search .left {
@@ -2333,9 +2364,36 @@ i.info-btn:hover .info-card {
           position: relative;
      }
 
+     .search-region-grid.map-active {
+          grid-template-columns: 30rem auto;
+     }
+
      .search-right {
           display: none;
      }
+
+     /* Product in map active start code */
+     .search-region-grid.map-active .card-product-search {
+          flex-direction: row;
+     }
+
+     .search-region-grid.map-active #search-product-slider.swiper {
+          height: 75%;
+     }
+
+     .search-region-grid.map-active .card-product-search .left {
+          width: auto;
+     }
+
+     .search-region-grid.map-active #search-product-slider.swiper {
+          width: 28rem;
+     }
+
+     .search-region-grid.map-active .tag {
+          right: 1rem;
+     }
+
+     /* Product in map active end code */
 
 }
 
@@ -2483,6 +2541,31 @@ i.info-btn:hover .info-card {
           width: 55vw;
      }
 
+     /* Product in map active start code */
+
+     .search-region-grid.map-active .card-product-search {
+          flex-direction: column;
+     }
+
+     .search-region-grid.map-active #search-product-slider.swiper {
+          height: 100%;
+          width: 100%;
+     }
+
+     .search-region-grid.map-active .card-product-search .left {
+          width: 100%;
+     }
+
+     .search-region-grid.map-active .tag {
+          right: 0;
+     }
+
+     /* Product in map active end code */
+
+     .search-region-grid.map-active #search-product-slider.swiper {
+          width: 55vw;
+     }
+
      .tag {
           right: 0;
      }
@@ -2549,7 +2632,15 @@ i.info-btn:hover .info-card {
           grid-template-columns: 1fr;
      }
 
+     .search-region-grid.map-active {
+          grid-template-columns: 1fr;
+     }
+
      #search-product-slider.swiper {
+          width: 94vw;
+     }
+
+     .search-region-grid.map-active #search-product-slider.swiper {
           width: 94vw;
      }
 
