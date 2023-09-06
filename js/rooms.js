@@ -40,6 +40,7 @@ child_btn_select.addEventListener('change', () => {
           </p>`
           child_keywords.innerHTML = child_keywords.innerHTML + childs;
           keyword_items = document.querySelectorAll('.keyword-items');
+          child_btn_select.selectedIndex = 0;
           room();
      } else {
           console.log('full child range');
