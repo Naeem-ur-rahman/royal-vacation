@@ -2803,10 +2803,14 @@ i.info-btn:hover .info-card {
           width: min-content;
           left: -3.5rem;
      }
+}
+
+@media only screen and (max-width: 330px) {
 
      .form-home {
           top: 42rem;
      }
+
 }
 
 @media only screen and (max-width: 320px) {}
