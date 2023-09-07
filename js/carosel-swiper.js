@@ -127,3 +127,18 @@ var swiper_gallery = new Swiper("#gallery-slider", {
           swiper: swiper_thumbs,
      },
 });
+
+
+var swiper = new Swiper("#room-pop-up", {
+     slidesPerView: 1,
+     initialSlide: 1,
+     navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          color: '#ac863b'
+     },
+     autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+     },
+});
