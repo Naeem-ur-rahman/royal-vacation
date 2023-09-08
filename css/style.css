@@ -2642,6 +2642,23 @@ i.info-btn:hover .info-card {
           justify-content: center;
      }
 
+     .room-pop-up .table-item {
+          justify-content: start;
+     }
+
+     .room-pop-up .table-item.cancel .info-card {
+          left: -1rem;
+     }
+
+     .room-pop-up .table-item.meal .info-card {
+          left: -7rem;
+     }
+
+     .room-pop-up .table-item.price,
+     .room-pop-up .table-item.booking {
+          justify-content: center;
+     }
+
      /* Room pop up */
      .room-pop-up {
           flex-direction: column;
