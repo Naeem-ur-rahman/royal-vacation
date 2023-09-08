@@ -2057,6 +2057,9 @@ i.info-btn {
      position: relative;
 }
 
+i.info-btn>img {
+     width: 1.5rem;
+}
 
 .info-card {
      position: absolute;
