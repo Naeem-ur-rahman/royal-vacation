@@ -2003,11 +2003,11 @@ a.text-black.main-color {
 
 .room-table-grid {
      display: grid;
-     grid-template-columns: repeat(5, 1fr);
+     grid-template-columns: repeat(6, 1fr);
 }
 
 .table-item {
-     font-size: 1.5rem;
+     font-size: 1.4rem;
      padding: 1.5rem;
      font-weight: 500;
      border: var(--border);
@@ -2017,7 +2017,7 @@ a.text-black.main-color {
 }
 
 .table-item>i {
-     font-size: 2.5rem;
+     font-size: 2rem;
      font-weight: 700;
 }
 
@@ -2030,10 +2030,9 @@ a.text-black.main-color {
 }
 
 .table-item.price {
-     font-size: 2rem;
+     font-size: 1.8rem;
      font-weight: 600;
      justify-content: center;
-
      background-color: #e8e8e8;
 }
 
@@ -2043,7 +2042,7 @@ a.text-black.main-color {
 }
 
 .table-item.th {
-     font-size: 2rem;
+     font-size: 1.5rem;
      font-weight: 500;
      justify-content: start;
      background-color: var(--text-color-dark-heading);
@@ -2097,6 +2096,10 @@ i.info-btn:hover .info-card {
 
 .info-card p>i {
      transform: rotate(90deg);
+}
+
+.table-item.meal .info-card {
+     right: -2rem;
 }
 
 .info-card.price {
@@ -2632,6 +2635,13 @@ i.info-btn:hover .info-card {
           right: auto;
      }
 
+     /* Search deatil page */
+     .table-item {
+          padding: 2rem .5rem;
+          gap: .5rem;
+          justify-content: center;
+     }
+
      /* Room pop up */
      .room-pop-up {
           flex-direction: column;
@@ -2757,6 +2767,51 @@ i.info-btn:hover .info-card {
           grid-template-columns: repeat(3, 1fr);
      }
 
+
+     .table-item.cancel {
+          /* display: none; */
+          border-bottom: none;
+     }
+
+     .table-item.room {
+          border-bottom: none;
+     }
+
+     .table-item.meal {
+          border-bottom: none;
+     }
+
+     .table-item.price {
+          border-top: none;
+     }
+
+     .table-item.payment-method {
+          border-top: none;
+     }
+
+     .table-item.booking {
+          border-top: none;
+          justify-content: center;
+          text-align: center;
+     }
+
+     .table-item.booking.th {
+          justify-content: start;
+     }
+
+     .room-table-grid {
+          grid-template-columns: repeat(3, 1fr);
+     }
+
+     .info-card.price {
+          right: -20rem;
+          top: 3rem;
+     }
+
+     .table-item.meal .info-card {
+          right: 0rem;
+     }
+
 }
 
 @media (width<601px) {
@@ -2871,39 +2926,12 @@ i.info-btn:hover .info-card {
           border-radius: inherit;
      }
 
-     .table-item.cancel {
-          display: none;
-     }
-
-     .table-item.room {
-          border-bottom: none;
-     }
-
-     .table-item.meal {
-          border-bottom: none;
-     }
-
-     .table-item.price {
-          border-top: none;
-     }
-
-     .table-item.booking {
-          border-top: none;
-          justify-content: center;
-          text-align: center;
-     }
-
-     .table-item.booking.th {
-          justify-content: start;
-     }
-
-     .room-table-grid {
-          grid-template-columns: repeat(2, 1fr);
+     .card-search.room {
+          padding: .1rem;
      }
 
      .info-card.price {
-          right: -22rem;
-          top: 3rem;
+          right: -28rem;
      }
 
      .card-search.description {
@@ -2928,6 +2956,10 @@ i.info-btn:hover .info-card {
 
      .visa-info .grid {
           grid-template-columns: 1fr;
+     }
+
+     .table-item.meal .info-card {
+          right: -10rem;
      }
 }
 
