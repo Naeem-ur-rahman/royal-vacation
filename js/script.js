@@ -144,3 +144,15 @@ window.addEventListener('scroll', function () {
      }
 
 });
+
+
+//  Header price value changed on click to the functions
+const price_type_list = document.querySelector('.navbar ul li:first-child');
+const price_value_display = price_type_list.querySelector('a span');
+const price_values = price_type_list.querySelectorAll('.drop-down a');
+
+price_values.forEach(value => {
+     value.addEventListener('click', () => {
+          price_value_display.innerHTML = value.textContent;
+     });
+});

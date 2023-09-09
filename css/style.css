@@ -1310,7 +1310,7 @@ p.about-text-footer {
 .search-right {
      background-color: var(--main-color);
      position: relative;
-     padding-top: 5rem;
+     padding-top: 4.1rem;
      transition: all .5s ease;
      height: 100vh;
 }
@@ -1362,8 +1362,9 @@ p.about-text-footer {
 
 .card-search {
      background-color: var(--bg-color);
-     border-radius: .2rem;
+     border-radius: .5rem;
      padding: 1.5rem;
+     box-shadow: var(--box-shadow);
 }
 
 .card-search p {
@@ -1835,11 +1836,34 @@ p.about-text-footer {
      font-weight: 600;
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
+     justify-content: start;
+     padding-bottom: 0;
+}
+
+.card-search.gallery>.right .box-product:nth-child(2) {
+     height: 100%;
+}
+
+.card-search.gallery>.right .box-product {
+     border: none;
+     padding-bottom: 0;
+}
+
+.card-search.gallery>.right .box-product:first-child {
+     border-bottom: var(--border);
+     padding-bottom: 2rem;
 }
 
 p.green {
      color: var(--bg--green);
+}
+
+p.black {
+     color: black;
+}
+
+p.red {
+     color: red;
 }
 
 .btn.text-center {
@@ -2562,12 +2586,16 @@ i.info-btn:hover .info-card {
      }
 
      .search-right {
-          display: none;
+          opacity: 0;
+          transition: transform .5s ease;
+          transform: translateX(100%);
      }
 
      /* Search Region */
      .search-right.active {
-          width: calc(100vw - 30rem);
+          width: calc(100vw - 31.9rem);
+          transform: translate(0);
+          opacity: 1;
      }
 
      /* Product in map active start code */
@@ -2704,6 +2732,11 @@ i.info-btn:hover .info-card {
      .room-pop-up .table-item.price,
      .room-pop-up .table-item.booking {
           justify-content: center;
+     }
+
+     /* Search Region */
+     .search-right.active {
+          width: calc(100vw - 30rem);
      }
 
      /* Room pop up */
