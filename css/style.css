@@ -1955,6 +1955,53 @@ a.text-black.main-color {
      gap: 1rem;
 }
 
+
+.card-search.available-rooms .available {
+     padding: 3rem 2rem;
+     background-color: #fff8dd;
+     border-radius: inherit;
+     margin-top: 2rem;
+}
+
+.card-search.available-rooms .available .card-line {
+     display: flex;
+     width: 100%;
+     flex-wrap: nowrap;
+}
+
+.card-search.available-rooms .available .card-line .column {
+     display: flex;
+     gap: 1rem;
+}
+
+.card-search.available-rooms .available .card-line .input-box {
+     display: flex;
+     flex-direction: column;
+     font-size: 1.4rem;
+     height: max-content;
+     gap: .5rem;
+     border: var(--border);
+     background-color: var(--bg-color);
+     border-radius: .5rem;
+     padding: .5rem;
+     width: 100%;
+}
+
+.card-search.available-rooms .available .card-line .input-box:hover {
+     border-color: black;
+}
+
+.card-search.available-rooms .available .card-line .input-box label {
+     font-size: 1.3rem;
+     color: var(--text-color-dark-heading);
+     font-weight: 600;
+}
+
+.card-search.available-rooms .available .card-line .input-box select {
+     color: grey;
+     cursor: pointer;
+}
+
 .up-room {
      display: flex;
      border-radius: .5rem;
@@ -2912,6 +2959,10 @@ i.info-btn:hover .info-card {
           display: block;
      }
 
+     .card-search.available-rooms .available .card-line {
+          flex-wrap: wrap;
+     }
+
      .card-search.gallery {
           flex-direction: column;
      }
@@ -3001,6 +3052,11 @@ i.info-btn:hover .info-card {
      /* Search Detail page */
      .card-search.amenities .grid {
           grid-template-columns: 1fr;
+     }
+
+
+     .card-search.available-rooms .available {
+          padding: 2rem 1rem;
      }
 
      /* room popup */
