@@ -156,3 +156,19 @@ price_values.forEach(value => {
           price_value_display.innerHTML = value.textContent;
      });
 });
+
+function dateSet() {
+     // date input field setter code.
+     let check_in = document.querySelector('#check-in');
+     let check_out = document.querySelector('#check-out');
+     let currentDate = new Date();
+     currentDate.setDate(currentDate.getDate() + 1);
+     let formattedDate = currentDate.toISOString().split('T')[0];
+     check_in.value = formattedDate;
+     currentDate.setDate(currentDate.getDate() + 1);
+     formattedDate = currentDate.toISOString().split('T')[0];
+     check_out.value = formattedDate;
+}
+
+// Function calls
+dateSet();
