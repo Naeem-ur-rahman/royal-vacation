@@ -2487,6 +2487,46 @@ i.info-btn:hover .info-card {
      z-index: -1;
 }
 
+/* Hotel Page */
+.hotel {
+     padding-top: 10rem;
+}
+
+.hotel-grid {
+     display: grid;
+     grid-template-columns: 1fr 3.5fr;
+     gap: 2rem;
+     padding: 2rem 0;
+}
+
+.hotel-grid .left {}
+
+.hotel-grid .left form {
+     background-color: var(--main-color);
+     color: var(--bg-color);
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     align-items: center;
+     box-shadow: var(--box-shadow-products);
+}
+
+.hotel-grid .left form .form-heading {
+     width: 100%;
+}
+
+.hotel-grid .left form select {
+     padding: 1rem;
+     width: 100%;
+     border-radius: .2rem;
+}
+
+.hotel-grid .left form .btn {
+     border-color: var(--bg-color);
+     padding: 1rem 2.5rem;
+     border-radius: .2rem;
+}
 
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
