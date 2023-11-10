@@ -2618,6 +2618,13 @@ i.info-btn:hover .info-card {
      text-overflow: ellipsis;
 }
 
+.btn.load-more {
+     display: block;
+     margin: auto;
+     width: fit-content;
+     margin-top: 3rem;
+}
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
