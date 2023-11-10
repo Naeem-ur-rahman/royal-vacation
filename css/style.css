@@ -2499,7 +2499,6 @@ i.info-btn:hover .info-card {
      padding: 2rem 0;
 }
 
-.hotel-grid .left {}
 
 .hotel-grid .left form {
      background-color: var(--main-color);
@@ -2520,12 +2519,35 @@ i.info-btn:hover .info-card {
      padding: 1rem;
      width: 100%;
      border-radius: .2rem;
+     color: var(--text-color-dark-heading);
 }
 
 .hotel-grid .left form .btn {
      border-color: var(--bg-color);
      padding: 1rem 2.5rem;
      border-radius: .2rem;
+}
+
+.hotel-grid .right .card-search {
+     background-color: var(--main-color);
+     border-radius: .1rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.hotel-grid .right .card-search .btn {
+     background-color: var(--bg-color);
+     color: var(--main-color);
+     padding: .5rem 1rem;
+     border-radius: .3rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.hotel-grid .right .card-search .btn i {
+     font-size: 2rem;
 }
 
 /* responsive breakpoints less than 5200px  */
@@ -2796,6 +2818,11 @@ i.info-btn:hover .info-card {
      .right-room-pop-up .info-card.price {
           left: -22rem;
      }
+
+     /* hotel page */
+     .hotel-grid {
+          grid-template-columns: 1fr 2.5fr;
+     }
 }
 
 @media (width<=768px) {
@@ -2947,6 +2974,11 @@ i.info-btn:hover .info-card {
 
      .table-item.meal .info-card {
           right: 0rem;
+     }
+
+     /* hotel page */
+     .hotel-grid {
+          grid-template-columns: 1fr;
      }
 
 }
