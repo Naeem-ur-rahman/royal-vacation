@@ -2582,6 +2582,19 @@ i.info-btn:hover .info-card {
      object-fit: cover;
 }
 
+.hotel-item .image-box {
+     position: relative;
+}
+
+.hotel-item .image-box::after {
+     position: absolute;
+     inset: 0;
+     margin: .5rem .5rem 0;
+     border: 5px double rgba(255, 255, 255, 0.5);
+     border-bottom: none;
+     z-index: 12;
+     content: '';
+}
 
 .hotel-items-grid {
      display: grid;
