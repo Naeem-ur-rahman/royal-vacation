@@ -671,7 +671,7 @@ select {
 .swiper-slide .slide-box {
      background: #fff;
      transition: .3s ease;
-     cursor: pointer;
+     /* cursor: pointer; */
      box-shadow: var(--box-shadow-products);
 }
 
