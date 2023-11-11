@@ -170,5 +170,16 @@ function dateSet() {
      check_out.value = formattedDate;
 }
 
+// Btn container btns active script
+let container_btns = document.querySelectorAll('.btn-container .btn_');
+container_btns.forEach(btn_ => {
+     btn_.addEventListener('click', () => {
+          container_btns.forEach(btn => {
+               btn.classList.remove('active')
+          });
+          btn_.classList.add('active');
+     })
+});
+
 // Function calls
 dateSet();
