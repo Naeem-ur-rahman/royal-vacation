@@ -2625,6 +2625,35 @@ i.info-btn:hover .info-card {
      margin-top: 3rem;
 }
 
+/* Tours page */
+.banner {
+     margin-top: 7rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     flex-direction: column;
+     text-transform: uppercase;
+     color: var(--bg-color);
+     font-weight: 500;
+     gap: 1rem;
+     background: url('../img/banner-tour.jpg') no-repeat;
+     background-position: center;
+     padding-top: 7rem;
+     padding-bottom: 6rem;
+}
+
+.banner-heading {
+     font-size: 3rem;
+     font-weight: 500;
+}
+
+.banner-heading-1 {
+     font-size: 1.7rem;
+     font-weight: 500;
+}
+
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
