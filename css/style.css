@@ -2855,6 +2855,33 @@ i.info-btn:hover .info-card {
      font-weight: 500;
 }
 
+.contact-banner {
+     padding: 7rem 0;
+     background-attachment: fixed;
+     background-color: var(--main-color);
+     background-image: url('../img/world-map.png');
+     background-position: center;
+     background-size: 80% auto;
+     background-repeat: no-repeat;
+     max-width: 110rem;
+     width: 100%;
+     box-shadow: 0 .5rem .7rem rgb(0 0 0 / 20%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.contact-banner .btn {
+     border-color: var(--bg-color);
+     padding: 1rem 10rem;
+}
+
+
+
+
+
+
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
@@ -3449,6 +3476,10 @@ i.info-btn:hover .info-card {
           padding: 1.5rem;
      }
 
+     .contact-banner .btn {
+          padding: 1rem 5rem;
+     }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -3521,6 +3552,11 @@ i.info-btn:hover .info-card {
      .room-container {
           width: min-content;
           left: -3.5rem;
+     }
+
+     /* Tour detali section */
+     .contact-banner {
+          padding: 5rem 0;
      }
 }
 
