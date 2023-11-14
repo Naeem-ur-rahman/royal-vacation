@@ -181,5 +181,19 @@ container_btns.forEach(btn_ => {
      })
 });
 
+
+//Tour detail btn script
+let tour_detail_btns = document.querySelectorAll('.tour-detail-main .btn-container .btn_');
+let tour_detail_btn_items = document.querySelectorAll('.tour-detail-main .tour-btn-detail-item');
+
+for (let i = 0; i < tour_detail_btns.length; i++) {
+     tour_detail_btns[i].addEventListener('click', () => {
+          tour_detail_btn_items.forEach(items => {
+               items.classList.remove('active')
+          });
+          tour_detail_btn_items[i].classList.add('active')
+     })
+}
+
 // Function calls
 dateSet();
