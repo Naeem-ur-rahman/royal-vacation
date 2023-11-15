@@ -203,11 +203,11 @@ contact_form_btn.addEventListener('click', () => {
      if (contact_form_btn.classList.contains('active')) {
           contact_form.classList.remove('active')
           contact_form_btn.classList.remove('active')
-          contact_form_btn.innerHTML = 'Close Form'
+          contact_form_btn.innerHTML = 'Book Now'
      } else {
           contact_form.classList.add('active')
           contact_form_btn.classList.add('active')
-          contact_form_btn.innerHTML = 'Book Now'
+          contact_form_btn.innerHTML = 'Close Form'
      }
 })
 
