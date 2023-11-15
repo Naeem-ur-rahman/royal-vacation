@@ -195,5 +195,21 @@ for (let i = 0; i < tour_detail_btns.length; i++) {
      })
 }
 
+// Contact form active Script
+const contact_form_btn = document.querySelector('.contact-banner .contact-btn');
+const contact_form = document.querySelector('.contact-banner .contact-form');
+
+contact_form_btn.addEventListener('click', () => {
+     if (contact_form_btn.classList.contains('active')) {
+          contact_form.classList.remove('active')
+          contact_form_btn.classList.remove('active')
+          contact_form_btn.innerHTML = 'Close Form'
+     } else {
+          contact_form.classList.add('active')
+          contact_form_btn.classList.add('active')
+          contact_form_btn.innerHTML = 'Book Now'
+     }
+})
+
 // Function calls
 dateSet();

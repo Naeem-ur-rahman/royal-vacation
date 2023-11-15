@@ -2876,8 +2876,30 @@ i.info-btn:hover .info-card {
      padding: 1rem 10rem;
 }
 
+.contact-form {
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 4rem 2rem 0rem;
+     flex-direction: column;
+     gap: 2rem;
+     display: none;
+}
 
+.contact-form.active {
+     display: flex;
+}
 
+.contact-form .form-line {
+     display: flex;
+     gap: 2rem;
+     width: 100%;
+}
+
+.contact-form input:not([type=submit]) {
+     width: 100%;
+     padding: 1rem;
+}
 
 
 
@@ -3478,6 +3500,10 @@ i.info-btn:hover .info-card {
 
      .contact-banner .btn {
           padding: 1rem 5rem;
+     }
+
+     .contact-form .form-line {
+          flex-direction: column;
      }
 
 }
