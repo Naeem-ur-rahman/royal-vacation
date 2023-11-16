@@ -203,7 +203,11 @@ contact_form_btn.addEventListener('click', () => {
      if (contact_form_btn.classList.contains('active')) {
           contact_form.classList.remove('active')
           contact_form_btn.classList.remove('active')
-          contact_form_btn.innerHTML = 'Book Now'
+          if (contact_form_btn.classList.contains('contact-page-btn')) {
+               contact_form_btn.innerHTML = 'Contact via form'
+          } else {
+               contact_form_btn.innerHTML = 'Book Now'
+          }
      } else {
           contact_form.classList.add('active')
           contact_form_btn.classList.add('active')

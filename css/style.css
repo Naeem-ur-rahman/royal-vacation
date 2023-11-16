@@ -2900,6 +2900,7 @@ i.info-btn:hover .info-card {
 textarea {
      width: 100%;
      padding: 1rem;
+     resize: none;
 }
 
 /* Contact Page */
@@ -2930,6 +2931,43 @@ textarea {
 
 .contact-banner.contact-page .contact-form {
      padding-top: 0;
+}
+
+.contact-info {
+     max-width: 110rem;
+     width: 100%;
+     box-shadow: 0 .5rem .7rem rgb(0 0 0 / 20%);
+     display: flex;
+     justify-content: space-between;
+     background-color: var(--bg-third-color);
+}
+
+.contact-info .contact-item {
+     padding: 3rem 1rem;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     width: 100%;
+}
+
+.contact-info .contact-item i {
+     font-size: 7rem;
+     color: var(--main-color);
+     padding-bottom: 1rem;
+}
+
+.contact-item .description {
+     color: var(--text-color-dark-heading);
+     font-size: 1.5rem;
+     font-weight: 700;
+     line-height: 2.4rem;
+     padding: 0 1rem;
+     text-align: center;
+}
+
+.contact-item .description span {
+     font-weight: 500;
 }
 
 /* responsive breakpoints less than 5200px  */
@@ -3531,6 +3569,12 @@ textarea {
      }
 
      .contact-form .form-line {
+          flex-direction: column;
+     }
+
+     /* Contact Page */
+
+     .contact-info {
           flex-direction: column;
      }
 
