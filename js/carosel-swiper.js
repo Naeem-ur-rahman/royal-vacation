@@ -109,6 +109,20 @@ var swiper = new Swiper("#search-product-slider", {
      },
 });
 
+var swiper = new Swiper("#hotel-detail-slider", {
+     slidesPerView: 1,
+     initialSlide: 1,
+     navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          color: '#ac863b'
+     },
+     autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+     },
+});
+
 
 // Galllery Carosel Search Deatil page
 var swiper_thumbs = new Swiper("#gallery-thumb", {

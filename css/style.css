@@ -2977,6 +2977,34 @@ textarea {
      font-size: 1.8rem;
 }
 
+.hotel-detail-grid {
+     display: grid;
+     grid-template-columns: 70% 30%;
+     padding-top: 2rem;
+}
+
+.hotel-detail-grid .left {
+     background-color: var(--bg-third-color);
+}
+
+.hotel-detail-info {
+     padding: 3rem;
+     padding-top: 2rem;
+}
+
+#hotel-detail-slider {
+     padding: 0 !important;
+}
+
+#hotel-detail-slider .swiper-slide img {
+     height: 100%;
+}
+
+.hotel-detail-info p.text-black {
+     padding-bottom: 2rem;
+     font-size: 1.6rem;
+}
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
@@ -3417,6 +3445,10 @@ textarea {
           grid-template-columns: repeat(2, 1fr);
      }
 
+     /* hotel detail page */
+     .hotel-detail-grid {
+          grid-template-columns: 100%;
+     }
 
 }
 
