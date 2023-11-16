@@ -2896,14 +2896,15 @@ i.info-btn:hover .info-card {
      width: 100%;
 }
 
-.contact-form input:not([type=submit]) {
+.contact-form input:not([type=submit]),
+textarea {
      width: 100%;
      padding: 1rem;
 }
 
 /* Contact Page */
 .map {
-     height: 500px;
+     height: 400px;
      background-color: var(--bg-third-color);
      width: 100%;
 }
@@ -2923,6 +2924,8 @@ i.info-btn:hover .info-card {
      /* font-weight: 700; */
      line-height: 2.4rem;
      color: var(--bg-color);
+     padding: 0 1rem;
+     text-align: center;
 }
 
 .contact-banner.contact-page .contact-form {
