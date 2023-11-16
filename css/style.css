@@ -2901,8 +2901,33 @@ i.info-btn:hover .info-card {
      padding: 1rem;
 }
 
+/* Contact Page */
+.map {
+     height: 500px;
+     background-color: var(--bg-third-color);
+     width: 100%;
+}
 
+.contact-banner.contact-page {
+     margin-top: -4rem;
+     gap: 3rem;
+}
 
+.contact-banner.contact-page .heading {
+     color: var(--bg-color);
+     padding: 0;
+}
+
+.contact-banner .description {
+     font-size: 1.6rem;
+     /* font-weight: 700; */
+     line-height: 2.4rem;
+     color: var(--bg-color);
+}
+
+.contact-banner.contact-page .contact-form {
+     padding-top: 0;
+}
 
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
