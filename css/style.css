@@ -2970,6 +2970,13 @@ textarea {
      font-weight: 500;
 }
 
+/* Hotel detail page */
+.banner .stars {
+     position: static;
+     background-color: transparent;
+     font-size: 1.8rem;
+}
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
