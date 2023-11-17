@@ -3005,6 +3005,22 @@ textarea {
      font-size: 1.6rem;
 }
 
+.hotel-detail-info .features-grid {
+     border: var(--border-main-color);
+     padding: 2rem;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
+
+.hotel-detail-info .features-grid p.text-black {
+     padding-bottom: 1rem;
+}
+
+.hotel-detail-info .features-grid p.text-black i {
+     color: var(--main-color);
+     font-size: 2.3rem;
+}
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
@@ -3137,6 +3153,11 @@ textarea {
      }
 
      /* Product in map active end code */
+
+     /* Hotel detail page */
+     .hotel-detail-info .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
 
 }
 
@@ -3615,6 +3636,12 @@ textarea {
 
      .contact-info {
           flex-direction: column;
+     }
+
+
+     /* Hotel detail page */
+     .hotel-detail-info .features-grid {
+          grid-template-columns: repeat(1, 1fr);
      }
 
 }
