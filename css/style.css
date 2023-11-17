@@ -42,9 +42,9 @@ html {
      overflow-x: hidden;
 }
 
-body {
-     /* overflow-x: hidden; */
-}
+/* body {
+     overflow-x: hidden;
+} */
 
 section {
      padding: 5rem 3% 5rem;
@@ -2980,6 +2980,7 @@ textarea {
 .hotel-detail-grid {
      display: grid;
      grid-template-columns: 65% 35%;
+     gap: 3rem;
      padding-top: 2rem;
 }
 
@@ -3022,7 +3023,7 @@ textarea {
 }
 
 .hotel-detail-grid .right {
-     padding-left: 3rem;
+     /* padding-left: 3rem; */
      height: 100%;
 }
 
@@ -3517,11 +3518,6 @@ textarea {
      .hotel-detail-grid {
           grid-template-columns: 100%;
      }
-
-     .hotel-detail-grid .right {
-          padding-left: 0rem;
-     }
-
 }
 
 @media (width<601px) {
