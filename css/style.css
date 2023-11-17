@@ -3069,6 +3069,31 @@ textarea {
      border-color: var(--bg-color);
 }
 
+/* About section */
+.about {
+     padding-top: 13rem;
+}
+
+.about>.heading {
+     text-align: center;
+}
+
+.about .text-black {
+     font-size: 1.7rem;
+     padding-bottom: 2rem;
+     font-weight: 400;
+}
+
+.about>.text-black {
+     padding-bottom: 3rem;
+}
+
+.about-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 3rem;
+}
+
 /* responsive breakpoints less than 5200px  */
 @media (width<=5200px) {
      html {
