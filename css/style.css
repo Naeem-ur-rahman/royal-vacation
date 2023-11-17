@@ -43,7 +43,7 @@ html {
 }
 
 body {
-     overflow-x: hidden;
+     /* overflow-x: hidden; */
 }
 
 section {
@@ -2979,7 +2979,7 @@ textarea {
 
 .hotel-detail-grid {
      display: grid;
-     grid-template-columns: 70% 30%;
+     grid-template-columns: 65% 35%;
      padding-top: 2rem;
 }
 
@@ -3019,6 +3019,53 @@ textarea {
 .hotel-detail-info .features-grid p.text-black i {
      color: var(--main-color);
      font-size: 2.3rem;
+}
+
+.hotel-detail-grid .right {
+     padding-left: 3rem;
+     height: 100%;
+}
+
+.hotel-deatail-form {
+     display: flex;
+     flex-direction: column;
+     background-color: var(--main-color);
+     padding: 3rem;
+     gap: 1rem;
+     box-shadow: var(--box-shadow-products);
+     position: sticky;
+     top: calc(7rem + 1rem);
+}
+
+.hotel-deatail-form .heading-1 {
+     color: var(--text-color-light);
+     font-size: 2.4rem;
+}
+
+.hotel-deatail-form label {
+     color: var(--text-color-light);
+     font-size: 1.6rem;
+}
+
+.hotel-deatail-form .form-line {
+     display: flex;
+     gap: 1rem;
+}
+
+.hotel-deatail-form .form-box {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+     width: 100%;
+}
+
+.hotel-deatail-form input:not([type='submit']) {
+     width: 100%;
+     padding: 1rem;
+}
+
+.hotel-deatail-form input[type='submit'] {
+     border-color: var(--bg-color);
 }
 
 /* responsive breakpoints less than 5200px  */
@@ -3469,6 +3516,10 @@ textarea {
      /* hotel detail page */
      .hotel-detail-grid {
           grid-template-columns: 100%;
+     }
+
+     .hotel-detail-grid .right {
+          padding-left: 0rem;
      }
 
 }
