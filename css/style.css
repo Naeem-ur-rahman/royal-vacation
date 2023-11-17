@@ -3070,12 +3070,9 @@ textarea {
 }
 
 /* About section */
-.about {
-     padding-top: 13rem;
-}
-
 .about>.heading {
      text-align: center;
+     padding: 5rem 0 4rem;
 }
 
 .about .text-black {
@@ -3092,6 +3089,49 @@ textarea {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 3rem;
+}
+
+.why-us-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2rem;
+}
+
+.why-us-item {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+     gap: 1rem;
+}
+
+.why-us-item .icon-container {
+     background-color: var(--main-color);
+     border-radius: 100rem;
+     width: fit-content;
+     padding: 1rem;
+     transition: padding .2s ease, margin .2s ease;
+     margin: 3rem;
+}
+
+.why-us-item:hover .icon-container {
+     margin: 1rem;
+     padding: 3rem;
+}
+
+.why-us-item i {
+     font-size: 8rem;
+     color: var(--bg-color);
+}
+
+.why-us-item h2 {
+     font-size: 2.4rem;
+     font-weight: 500;
+}
+
+.why-us-item p {
+     font-size: 1.7rem;
 }
 
 /* responsive breakpoints less than 5200px  */
@@ -3543,6 +3583,15 @@ textarea {
      .hotel-detail-grid {
           grid-template-columns: 100%;
      }
+
+     .about-grid {
+          grid-template-columns: repeat(1, 1fr);
+     }
+
+     .why-us-grid {
+          grid-template-columns: repeat(1, 1fr);
+     }
+
 }
 
 @media (width<601px) {
