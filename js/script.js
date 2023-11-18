@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
      for (let i = 0; i < navbar_a.length; i++) {
           let click = new Array(true, true, true);
 
-          navbar_a[i].addEventListener('click', () => {
+          navbar_a[i]?.addEventListener('click', () => {
                if (window.matchMedia('(max-width: 991px)').matches) {
                     if (click[i]) {
                          for (let k = 0; k < navbar_a.length; k++) {
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
      let search_region_grid = document.querySelector('.search-region-grid');
      let expand_map = document.querySelector('.search-right .btn');
      let check = true;
-     list_view.addEventListener('click', () => {
+     list_view?.addEventListener('click', () => {
           search_region_grid.classList.remove('map-active');
           list_view.classList.add('active');
           map_view.classList.remove('active');
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }
           check = true;
      });
-     map_view.addEventListener('click', () => {
+     map_view?.addEventListener('click', () => {
           search_region_grid.classList.add('map-active');
           map_view.classList.add('active');
           list_view.classList.remove('active');
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }
           check = false;
      });
-     expand_map.addEventListener('click', () => {
+     expand_map?.addEventListener('click', () => {
           search_region_grid.classList.toggle('map-active');
           if (window.matchMedia('(max-width: 1024px)').matches) {
                right_search.classList.toggle('active');
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
      toggle_cards.forEach(card => {
           let search_line = card.querySelectorAll('.search-line');
           let btn = card.querySelector('h2 i');
-          btn.addEventListener('click', () => {
+          btn?.addEventListener('click', () => {
                search_line.forEach(line => {
                     line.classList.toggle('hidden');
                });
@@ -152,7 +152,7 @@ const price_value_display = price_type_list.querySelector('a span');
 const price_values = price_type_list.querySelectorAll('.drop-down a');
 
 price_values.forEach(value => {
-     value.addEventListener('click', () => {
+     value?.addEventListener('click', () => {
           price_value_display.innerHTML = value.textContent;
      });
 });
@@ -173,7 +173,7 @@ function dateSet() {
 // Btn container btns active script
 let container_btns = document.querySelectorAll('.btn-container .btn_');
 container_btns.forEach(btn_ => {
-     btn_.addEventListener('click', () => {
+     btn_?.addEventListener('click', () => {
           container_btns.forEach(btn => {
                btn.classList.remove('active')
           });
@@ -187,7 +187,7 @@ let tour_detail_btns = document.querySelectorAll('.tour-detail-main .btn-contain
 let tour_detail_btn_items = document.querySelectorAll('.tour-detail-main .tour-btn-detail-item');
 
 for (let i = 0; i < tour_detail_btns.length; i++) {
-     tour_detail_btns[i].addEventListener('click', () => {
+     tour_detail_btns[i]?.addEventListener('click', () => {
           tour_detail_btn_items.forEach(items => {
                items.classList.remove('active')
           });
@@ -199,7 +199,7 @@ for (let i = 0; i < tour_detail_btns.length; i++) {
 const contact_form_btn = document.querySelector('.contact-banner .contact-btn');
 const contact_form = document.querySelector('.contact-banner .contact-form');
 
-contact_form_btn.addEventListener('click', () => {
+contact_form_btn?.addEventListener('click', () => {
      if (contact_form_btn.classList.contains('active')) {
           contact_form.classList.remove('active')
           contact_form_btn.classList.remove('active')
@@ -215,5 +215,14 @@ contact_form_btn.addEventListener('click', () => {
      }
 })
 
+// Guests Script 
+const guest_box = document.querySelector('.guest-box ');
+
+let guest_input = guest_box.querySelector('input')
+let guest_card = guest_box.querySelector('.card')
+guest_input?.addEventListener('click', () => {
+     console.log('clicked')
+     guest_card.classList.toggle('active')
+})
 // Function calls
 dateSet();

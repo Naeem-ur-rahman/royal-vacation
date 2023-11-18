@@ -13,11 +13,11 @@ function adult(check) {
 const room_box = document.querySelector('#room-label');
 const room_container = document.querySelector('.room-container');
 
-room_box.addEventListener('click', () => {
+room_box?.addEventListener('click', () => {
      room_container.classList.add('active');
 })
 
-document.querySelector('#room-done').addEventListener('click', () => {
+document.querySelector('#room-done')?.addEventListener('click', () => {
      room_container.classList.remove('active');
 })
 
@@ -26,13 +26,13 @@ const child_btn_select = document.querySelector('.line-input.child select');
 const child_keywords = document.querySelector('.line-input.child .keywords');
 let keyword_items = document.querySelectorAll('.keyword-items');
 
-child_btn.addEventListener('click', () => {
+child_btn?.addEventListener('click', () => {
      child_btn_select.classList.add('active');
 });
 
 
 
-child_btn_select.addEventListener('change', () => {
+child_btn_select?.addEventListener('change', () => {
      if (keyword_items.length < 4) {
           text = child_btn_select.value;
           const childs = `<p class="keyword-items"> <span style="font-size: 1.6rem;"> ${text} year </span> 
