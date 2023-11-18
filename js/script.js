@@ -220,9 +220,45 @@ const guest_box = document.querySelector('.guest-box ');
 
 let guest_input = guest_box.querySelector('input')
 let guest_card = guest_box.querySelector('.card')
+let guest_card_cancel = guest_box.querySelector('.cancel-card')
+let guest_card_boxes = guest_box.querySelectorAll('.box')
+
 guest_input?.addEventListener('click', () => {
-     console.log('clicked')
      guest_card.classList.toggle('active')
 })
+
+guest_card_cancel?.addEventListener('click', () => {
+     guest_card.classList.remove('active');
+})
+
+guest_card_boxes?.forEach(box => {
+     let total = box.querySelector('.total');
+     let inc = box.querySelector('.inc');
+     let dec = box.querySelector('.dec');
+     let total_all = guest_card.querySelectorAll('.total');
+
+     inc?.addEventListener('click', () => {
+          if (total.innerText < 12) {
+               total.innerHTML = ++total.innerText
+               console.log(total.innerText, "Inc")
+          }
+          let val = 0;
+          for (let i = 0; i < total_all.length; i++) {
+               val += Number(total_all[i].innerText);
+          }
+          guest_input.value = val;
+     })
+     dec?.addEventListener('click', () => {
+          if (total.innerText > 0) {
+               total.innerHTML = --total.innerText
+               console.log(total.innerText, "Dec")
+          }
+          let val = 0;
+          for (let i = 0; i < total_all.length; i++) {
+               val += Number(total_all[i].innerText);
+          }
+          guest_input.value = val;
+     })
+});
 // Function calls
 dateSet();
